@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta name="generator" content="Hugo 0.94.2" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Quick Start </title>
+
+  
+  <meta name="description" content="Up and running in under a minute"> 
+  
+  
+  
+  
+  
+
+  
+
+  <meta name="author" content="elemnts.net">
+
+
+  <meta property="og:title" content="Quick Start" />
+<meta property="og:description" content="Up and running in under a minute" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/docs/quick-start/" /><meta property="article:section" content="docs" />
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  
+  
+
+  <link rel="canonical" href="/docs/quick-start/">  
+
+  <link rel="shortcut icon" type="image/png" href="data:image/png;base64,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RvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3EldwAAAAAAAJJjRvlaOwAAAAAAALXmk3Eld+D/AfhEhmLqHBsfAAAAAElFTkSuQmCC">
+
+
+  <link href="/css/font.css" rel="stylesheet" type="text/css">
+  <link href="/css/kube.min.css" rel="stylesheet" type="text/css">
+  <link href="/css/kube.legenda.css" rel="stylesheet" type="text/css">
+  <link href="/css/highlight.css" rel="stylesheet" type="text/css">
+  <link href="/css/main.css" rel="stylesheet" type="text/css">
+  
+
+ <link href="/css/custom.css" rel="stylesheet" type="text/css">
+
+  <script src="/js/jquery-2.1.4.min.js" type="text/javascript">
+  </script>
+
+  <script type="text/javascript" src="/js/tocbot.min.js"></script>
+</head>
+
+
+<body class="page-kube">
+  <header> <div class="show-sm">
+    <div id="nav-toggle-box">
+      <div id="nav-toggle-brand">
+        <a href="/">S3KV</a>
+      </div><a data-component="toggleme" data-target="#top" href="#" id="nav-toggle"><i class="kube-menu"></i></a>
+    </div>
+  </div>
+  <div class="hide-sm" id="top">
+    <div id="top-brand">
+      <a href="/" title="home">S3KV</a>
+    </div>
+    <nav id="top-nav-main">
+      <ul>
+       
+       
+    <li><a href="/docs/quick-start" >Quick Start</a></li>
+    
+      </ul>
+    </nav>
+    <nav id="top-nav-extra"> 
+      <ul>
+          
+      </ul>
+    </nav>
+  </div>
+ </header>
+  <main>
+  <div id="main">
+    <div id="hero">
+      <h1> Quick Start </h1>
+      <p class="hero-lead">
+           S3KV is a key value database backed by S3 Object Storage. Primary use cases include configuration and secrets management as well as data flow caching. The Library supports the standard add/get/delete and extends those by convenience methods for automated cache retrieval and object metadadta..
+      </p>
+
+    </div> 
+    <div id="kube-component" class="content">
+    
+<nav id="contents">
+    <ol class="js-toc">
+    </ol>
+</nav>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded",
+function(){
+tocbot.init({
+
+tocSelector: '.js-toc',
+
+contentSelector: '.content',
+
+headingSelector: 'h3'
+})
+}
+);
+</script>
+
+
+
+    <h3 id="basic-operations">Basic Operations</h3>
+<p>The following are the basic operations.</p>
+<pre tabindex="0"><code># Import the s3kv library
+from s3kv import S3KV
+import os
+
+
+# Initialize the database with S3 credentials and bucket name
+s3kv = S3KV(os.environ[&#39;S3_ENDPOINT_URL&#39;],
+             os.environ[&#39;S3_BUCKET&#39;], 
+             os.environ[&#39;AWS_ACCESS_KEY_ID&#39;], os.environ[&#39;AWS_SECRET_ACCESS_KEY&#39;],
+             enable_local_cache=True)
+
+# Store data in the database
+s3kv.add(&#39;key1&#39;, &#39;value1&#39;)
+s3kv.add(&#39;key2&#39;, {&#39;name&#39;: &#39;John&#39;, &#39;age&#39;: 30})
+
+# Retrieve data from the database
+value1 = s3kv.get(&#39;key1&#39;)
+data = s3kv.get(&#39;key2&#39;)
+
+# Delete a key
+s3kv.delete(&#39;key1&#39;)
+
+# Check if a key exists
+if s3kv.exists(&#39;key3&#39;):
+    print(&#34;Key &#39;key3&#39; exists!&#34;)
+</code></pre><h3 id="extended-key-operations--copy-and-merge">Extended Key Operations : Copy and Merge</h3>
+<p>In the copy_key method, we use the get_object method to retrieve the value of the source key from the S3 bucket. Then, we use the put_object method to store the same value under the destination key. If the source key exists in the local cache (/tmp/s3kv_cache), we also copy the cached value to the destination key in the cache.</p>
+<p>Please note that if the source key does not exist, the method will raise an error. Ensure that the source key exists before calling this method. You can use the key_exists method to check if the source key exists.</p>
+<p>Here’s an example of how to use the copy_key method:</p>
+<pre tabindex="0"><code># Import the s3kv library
+from s3kv import S3KV
+import os
+
+
+# Initialize the database with S3 credentials and bucket name
+s3kv = S3KV(os.environ[&#39;S3_ENDPOINT_URL&#39;],
+             os.environ[&#39;S3_BUCKET&#39;], 
+             os.environ[&#39;AWS_ACCESS_KEY_ID&#39;], os.environ[&#39;AWS_SECRET_ACCESS_KEY&#39;],
+             enable_local_cache=True)
+
+data = {&#34;name&#34;: &#34;john&#34;}
+s3kv.add(&#39;source_key&#39;,data)
+
+source_key = &#39;source_key&#39;
+destination_key = &#39;destination_key&#39;
+if s3kv.key_exists(source_key):
+    s3kv.copy_key(source_key, destination_key)
+else:
+    print(f&#34;The source key &#39;{source_key}&#39; does not exist in the S3KV database.&#34;)
+</code></pre><p>In the merge_keys method, we iterate through the list of source keys, retrieve their values, and merge them into the destination value using the update method. Then, we update the value of the destination key both in the S3 bucket and the local cache. To use this method, you can call it with a list of source keys and the destination key:</p>
+<pre tabindex="0"><code># Import the s3kv library
+from s3kv import S3KV
+import os
+
+
+# Initialize the database with S3 credentials and bucket name
+s3kv = S3KV(os.environ[&#39;S3_ENDPOINT_URL&#39;],
+             os.environ[&#39;S3_BUCKET&#39;], 
+             os.environ[&#39;AWS_ACCESS_KEY_ID&#39;], os.environ[&#39;AWS_SECRET_ACCESS_KEY&#39;],
+             enable_local_cache=True)
+
+data_a = {&#34;data_a&#34;: &#34;value_a&#34;}
+s3kv.add(&#39;source_key_a&#39;,data_a,None)
+
+data_b = {&#34;data_b&#34;: &#34;value_b&#34;}
+s3kv.add(&#39;source_key_b&#39;,data_b,None)
+
+source_keys = [&#39;source_key_a&#39;, &#39;source_key_b&#39;]
+destination_key = &#39;destination_key&#39;
+
+s3kv.merge_keys(source_keys, destination_key)
+</code></pre><h3 id="cache-operations">Cache Operations</h3>
+<p>The following are the Cache operations.</p>
+<pre tabindex="0"><code># Import the s3kv library
+from s3kv import S3KV
+import os
+
+# Initialize the s3kv database with local caching and key indexing
+s3kv = S3KV(os.environ[&#39;S3_ENDPOINT_URL&#39;],
+             os.environ[&#39;S3_BUCKET&#39;], 
+             os.environ[&#39;AWS_ACCESS_KEY_ID&#39;], os.environ[&#39;AWS_SECRET_ACCESS_KEY&#39;],
+             enable_local_cache=True)
+
+# Explicitly clear the cache
+s3kv.clear_cache()  # Clears the entire local cache
+
+# Clear files older than max_days
+max_days = 2
+s3kv.clear_old_cache(max_days)
+
+# Clear the cache for a specific key
+s3kv.clear_cache_for_key(&#39;test&#39;)
+</code></pre><h3 id="tagging-keys">Tagging Keys</h3>
+<p>In addition to the existing features, S3KV introduces the ability to tag keys, which provides a convenient and organized way to manage hundreds of configurations or key-value pairs. Tags allow developers to associate metadata with individual keys, making it easier to categorize, search, and apply policies based on specific attributes. For example, in the context of configuration settings, keys related to a particular module or component can be tagged with the module&rsquo;s name, making it easier to manage and retrieve configurations for specific parts of the application.</p>
+<p>You can add tags to new objects when you upload them, or you can add them to existing objects. Quoting the AWS S3 Docs -</p>
+<ul>
+<li>You can associate up to 10 tags with an object. Tags that are associated with an object must have unique tag keys.</li>
+<li>A tag key can be up to 128 Unicode characters in length, and tag values can be up to 256 Unicode characters in length. Amazon S3 object tags are internally represented in UTF-16. Note that in UTF-16, characters consume either 1 or 2 character positions.</li>
+<li>The key and values are case sensitive.</li>
+</ul>
+<p>**IMPORTANT: If a key is overwritten any tags added prior will be deleted.</p>
+<pre tabindex="0"><code># Import the s3kv library
+from s3kv import S3KV
+import os
+
+# Initialize the s3kv database with local caching and key indexing
+s3kv = S3KV(os.environ[&#39;S3_ENDPOINT_URL&#39;],
+             os.environ[&#39;S3_BUCKET&#39;], 
+             os.environ[&#39;AWS_ACCESS_KEY_ID&#39;], os.environ[&#39;AWS_SECRET_ACCESS_KEY&#39;],
+             enable_local_cache=True)
+
+# Store data in the database with tags
+s3kv.tag_key(&#39;test_c&#39;,  tags={&#39;module&#39;: &#39;user_management&#39;, &#39;environment&#39;: &#39;production&#39;})
+
+# Get tags assigned to a specific key
+tags = s3kv.get_tags(&#39;s3kv/test_c.json&#39;)
+print(tags)
+
+# Find all keys with a tag key set to a specific value
+keys = s3kv.find_keys_by_tag_value(&#39;environment&#39;,&#39;production&#39;)
+print(keys)
+
+# Tag multiple keys which share a prefix
+s3kv.tag_keys_with_prefix(&#39;s3kv/test&#39;, {&#39;module&#39;: &#39;user_management&#39;, &#39;environment&#39;: &#39;production&#39;})
+
+# Delete a key by tag (delete all keys where the &#34;module&#34; tag == &#34;user_management&#34;)
+s3kv.delete_by_tag(&#39;module&#39;, &#39;user_management&#39;)
+</code></pre><h3 id="listing-keys">Listing Keys</h3>
+<p>The following are the list operations.</p>
+<pre tabindex="0"><code># Import the s3kv library
+from s3kv import S3KV
+import os
+
+# Initialize the database with S3 credentials and bucket name
+s3kv = S3KV(os.environ[&#39;S3_ENDPOINT_URL&#39;],
+             os.environ[&#39;S3_BUCKET&#39;], 
+             os.environ[&#39;AWS_ACCESS_KEY_ID&#39;], os.environ[&#39;AWS_SECRET_ACCESS_KEY&#39;],
+             enable_local_cache=True)
+
+# List all keys
+keys = s3kv.list_keys()
+
+# List all keys with a specific prefix
+s3kv.list_keys_with_prefix(&#39;s3kv/test&#39;)
+
+# Find all keys with a tag set to a specific value
+keys = s3kv.find_keys_by_tag_value(&#39;environment&#39;,&#39;production&#39;)
+print(keys)
+</code></pre><h3 id="locking-keys---retention-and-legal-hold">Locking Keys - Retention and Legal Hold</h3>
+<p>Introducing the ability to apply locks to keys offers enhanced data governance and compliance capabilities. These locks come in two types - retention and legal hold - each serving a specific purpose in ensuring data immutability and compliance with regulations or internal policies.</p>
+<ol>
+<li>Retention Lock: A retention lock allows users to enforce a specified period during which a key cannot be modified or deleted. This feature is particularly useful for maintaining data integrity and ensuring that critical data remains unchanged for regulatory or compliance reasons. <em>Once a retention lock is applied to a key, it cannot be altered or deleted until the specified retention period expires.</em></li>
+<li>Legal Hold: On the other hand, a legal hold lock is a more flexible form of locking. <em>When a legal hold is applied to a key, it prevents the key from being deleted, but allows it to be modified.</em> The lock remains in effect until explicitly removed, providing a higher level of control over the data lifecycle while still allowing for data updates as needed.</li>
+</ol>
+<p>** IMPORTANT **
+Key locks require bucket versioning to be enabled on bucket creation.</p>
+<pre tabindex="0"><code># Import the s3kv library
+from s3kv import S3KV
+import os
+
+# Initialize the database with S3 credentials and bucket name
+s3kv = S3KV(os.environ[&#39;S3_ENDPOINT_URL&#39;],
+             os.environ[&#39;S3_BUCKET&#39;], 
+             os.environ[&#39;AWS_ACCESS_KEY_ID&#39;], os.environ[&#39;AWS_SECRET_ACCESS_KEY&#39;],
+             enable_local_cache=True)
+
+
+data = {&#39;name&#39;: &#39;fat_boy_slim&#39;}
+s3kv.add(&#39;test_retention&#39;, data)
+
+# Place a retention lock on a key (object cannot be deleted or 
+# changed for 365 days)
+s3kv.place_retention_lock(&#39;test_retention&#39;, 365)
+
+# Remove a retention lock
+s3kv.remove_retention_lock(&#39;test_retention&#39;)
+
+# Apply legal hold to a key (object cannot be deleted but can be modified)
+s3kv.apply_legal_hold(&#39;test_retention&#39;)
+
+# Check if a key is under legal hold
+if s3kv.is_legal_hold_applied(&#39;test_retention&#39;):
+    print(&#34;Key &#39;test_retention&#39; is under legal hold.&#34;)
+
+
+# Release legal hold on a key
+s3kv.release_legal_hold(&#39;test_retention&#39;)
+
+# Check if a key is under legal hold
+if s3kv.is_legal_hold_applied(&#39;test_retention&#39;):
+    print(&#34;Key &#39;test_retention&#39; is under legal hold.&#34;)
+</code></pre><h3 id="utility-functions">Utility functions</h3>
+<p>The following are utility functions</p>
+<pre tabindex="0"><code># Import the s3kv library
+from s3kv import S3KV
+import os
+
+# Initialize the database with S3 credentials and bucket name
+s3kv = S3KV(os.environ[&#39;S3_ENDPOINT_URL&#39;],
+             os.environ[&#39;S3_BUCKET&#39;], 
+             os.environ[&#39;AWS_ACCESS_KEY_ID&#39;], os.environ[&#39;AWS_SECRET_ACCESS_KEY&#39;],
+             enable_local_cache=True)
+
+data = {&#34;dj&#34;: &#34;fat boy slim&#34;}
+s3kv.add(&#39;test&#39;, data)
+
+# Get the key size (file size)
+size = s3kv.get_key_size(&#39;test&#39;)
+print(size)
+
+# Get the last updated time of the key
+last_updated_date = s3kv.get_key_last_updated_time(&#39;test&#39;)
+print(last_updated_date)
+</code></pre>
+
+    
+    </div>
+    </div>
+</main>
+  <footer></footer>
+
+
+  <script src="/js/kube.js" type="text/javascript">
+  </script>
+  <script src="/js/kube.legenda.js" type="text/javascript">
+  </script>
+  <script src="/js/main.js" type="text/javascript">
+  </script>
+</body>
+
+</html>

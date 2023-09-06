@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docs on S3KV</title>
+    <link>/docs/</link>
+    <description>Recent content in Docs on S3KV</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 10 Apr 2017 16:43:36 +0100</lastBuildDate><atom:link href="/docs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Quick Start</title>
+      <link>/docs/quick-start/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/quick-start/</guid>
+      <description>Basic Operations The following are the basic operations.
+# Import the s3kv libraryfrom s3kv import S3KVimport os# Initialize the database with S3 credentials and bucket names3kv = S3KV(os.environ[&amp;#39;S3_ENDPOINT_URL&amp;#39;],os.environ[&amp;#39;S3_BUCKET&amp;#39;], os.environ[&amp;#39;AWS_ACCESS_KEY_ID&amp;#39;], os.environ[&amp;#39;AWS_SECRET_ACCESS_KEY&amp;#39;],enable_local_cache=True)# Store data in the databases3kv.add(&amp;#39;key1&amp;#39;, &amp;#39;value1&amp;#39;)s3kv.add(&amp;#39;key2&amp;#39;, {&amp;#39;name&amp;#39;: &amp;#39;John&amp;#39;, &amp;#39;age&amp;#39;: 30})# Retrieve data from the databasevalue1 = s3kv.get(&amp;#39;key1&amp;#39;)data = s3kv.get(&amp;#39;key2&amp;#39;)# Delete a keys3kv.delete(&amp;#39;key1&amp;#39;)# Check if a key existsif s3kv.</description>
+    </item>
+    
+    <item>
+      <title>Custom Plugins</title>
+      <link>/docs/custom-plugins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/custom-plugins/</guid>
+      <description>Plugin TemplateHere&#39;s what a generic plugin looks like. This template gives an overall idea of what you can do with plugins in Kube. Feel free to use this one as a boilerplate for your custom plugins.
+(function(Kube){Kube.Myplugin = function(element, options){this.namespace = &#39;myplugin&#39;;// default settingsthis.defaults = {mysetting: true};// Parent ConstructorKube.apply(this, arguments);// Initializationthis.start();};// FunctionalityKube.Myplugin.prototype = {start: function(){// plugin elementconsole.</description>
+    </item>
+    
+    <item>
+      <title>Typography</title>
+      <link>/docs/typography/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/typography/</guid>
+      <description>Get Started Typography of Kube based on the 4px horizontal grid, it means that for the headers, paragraphs, quotes and any other texts chosen are a combination of line-height, that fit into the 4px grid and help set the horizontal rhythm of design by default.
+  4px grid for typography - the magic of the horizontal rhythm   With this feature, you can quickly and easily make a solid and harmonious-looking website and UI design.</description>
+    </item>
+    
+    <item>
+      <title>Grid</title>
+      <link>/docs/grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/grid/</guid>
+      <description>Columns Columns are building blocks for many websites. Here&#39;s how columns are formed in Kube, and here&#39;s how you can use them right away.
+1  11   2  10   3  9   4  8   5  7   6  6   7  5   8  4   9  3   10  2   11  1   12   &amp;lt;div class=&#34;</description>
+    </item>
+    
+    <item>
+      <title>Tables</title>
+      <link>/docs/tables/</link>
+      <pubDate>Mon, 10 Apr 2017 16:40:43 +0100</pubDate>
+      
+      <guid>/docs/tables/</guid>
+      <description>Base    First Name Last Name Points     Jill Smith 50   Eve Jackson 94     Total points 223    &amp;lt;table&amp;gt;...&amp;lt;/table&amp;gt;  Bordered   First Name Last Name Points     Jill Smith 50   Eve Jackson 94     Total points 223    &amp;lt;table class=&#34;bordered&#34;&amp;gt;...&amp;lt;/table&amp;gt;  Striped   First Name Last Name Points     Jill Smith 50   Eve Jackson 94     Total points 223    &amp;lt;table class=&#34;</description>
+    </item>
+    
+    <item>
+      <title>Forms</title>
+      <link>/docs/forms/</link>
+      <pubDate>Mon, 10 Apr 2017 16:40:50 +0100</pubDate>
+      
+      <guid>/docs/forms/</guid>
+      <description>Base This is the most basic form with all the basic inputs.
+Email  Country  ---    Check me Radio me    Log in Cancel   &amp;lt;form method=&#34;post&#34; action=&#34;&#34; class=&#34;form&#34;&amp;gt; &amp;lt;div class=&#34;form-item&#34;&amp;gt; &amp;lt;label&amp;gt;Email&amp;lt;/label&amp;gt; &amp;lt;input type=&#34;email&#34; name=&#34;email&#34; class=&#34;w50&#34;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div class=&#34;form-item&#34;&amp;gt; &amp;lt;label&amp;gt;Country&amp;lt;/label&amp;gt; &amp;lt;select&amp;gt; &amp;lt;option value=&#34;&#34;&amp;gt;---&amp;lt;/option&amp;gt; &amp;lt;/select&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div class=&#34;form-item&#34;&amp;gt; &amp;lt;label class=&#34;checkbox&#34;&amp;gt;&amp;lt;input type=&#34;checkbox&#34;&amp;gt; Check me&amp;lt;/label&amp;gt; &amp;lt;label class=&#34;checkbox&#34;&amp;gt;&amp;lt;input type=&#34;radio&#34;&amp;gt; Radio me&amp;lt;/label&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div class=&#34;form-item&#34;&amp;gt; &amp;lt;textarea rows=&#34;6&#34;&amp;gt;&amp;lt;/textarea&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div class=&#34;</description>
+    </item>
+    
+    <item>
+      <title>Buttons</title>
+      <link>/docs/buttons/</link>
+      <pubDate>Mon, 10 Apr 2017 16:41:16 +0100</pubDate>
+      
+      <guid>/docs/buttons/</guid>
+      <description>Primary Button Button &amp;lt;button class=&#34;button&#34;&amp;gt;Button&amp;lt;/button&amp;gt; &amp;lt;a href=&#34;#&#34; class=&#34;button&#34;&amp;gt;Button&amp;lt;/a&amp;gt;  Secondary Button Button &amp;lt;button class=&#34;button secondary&#34;&amp;gt;Button&amp;lt;/button&amp;gt; &amp;lt;a href=&#34;#&#34; class=&#34;button secondary&#34;&amp;gt;Button&amp;lt;/a&amp;gt;  Outline Outline class does exactly what it is supposed to do: styles a button with an outline with no fill color.
+Button Button &amp;lt;button class=&#34;button outline&#34;&amp;gt;Button&amp;lt;/button&amp;gt; &amp;lt;button class=&#34;button secondary outline&#34;&amp;gt;Button&amp;lt;/button&amp;gt;  Disabled Disabled buttons are automatically styles with muted colors, inactive and not clickable. As you can see, there&#39;s no need to set disabled class for the button element, and disabled argument is enough.</description>
+    </item>
+    
+    <item>
+      <title>Labels</title>
+      <link>/docs/labels/</link>
+      <pubDate>Mon, 10 Apr 2017 16:40:43 +0100</pubDate>
+      
+      <guid>/docs/labels/</guid>
+      <description>Base Default &amp;nbsp; Success &amp;nbsp; Error &amp;nbsp; Warning &amp;nbsp; Focus &amp;nbsp; Black &amp;nbsp; Inverted  Outline Default &amp;nbsp; Success &amp;nbsp; Error &amp;nbsp; Warning &amp;nbsp; Focus &amp;nbsp; Black &amp;nbsp; Inverted  Upper Default &amp;nbsp; Success &amp;nbsp; Error &amp;nbsp; Warning &amp;nbsp; Focus &amp;nbsp; Black &amp;nbsp; Inverted  Tag Default &amp;nbsp; Success &amp;nbsp; Error &amp;nbsp; Warning &amp;nbsp; Focus &amp;nbsp; Black &amp;nbsp; Inverted  Badges Labels are ideal for use as badges with badge class.</description>
+    </item>
+    
+    <item>
+      <title>Messages</title>
+      <link>/docs/messages/</link>
+      <pubDate>Mon, 10 Apr 2017 16:41:34 +0100</pubDate>
+      
+      <guid>/docs/messages/</guid>
+      <description>Usage You have 2 modules waiting to installation. Install   &amp;lt;div class=&#34;message&#34; data-component=&#34;message&#34;&amp;gt; ... &amp;lt;span class=&#34;close small&#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;  You have 2 modules waiting to installation. Install   &amp;lt;div class=&#34;message error&#34; data-component=&#34;message&#34;&amp;gt; ... &amp;lt;span class=&#34;close small&#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;  You have 2 modules waiting to installation. Install   &amp;lt;div class=&#34;message success&#34; data-component=&#34;message&#34;&amp;gt; ... &amp;lt;span class=&#34;close small&#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;  Warning!You have 2 modules waiting to installation. Install   &amp;lt;div class=&#34;message warning&#34;</description>
+    </item>
+    
+    <item>
+      <title>Tabs</title>
+      <link>/docs/tabs/</link>
+      <pubDate>Mon, 10 Apr 2017 16:41:40 +0100</pubDate>
+      
+      <guid>/docs/tabs/</guid>
+      <description>Base Here&#39;s an example of basic tabs setup. Tabs bar is an unordered list, and each tab in tabs bar is a list item. For each tab there&#39;s a corresponding div, which contains the body of the tab (it can be any kind of HTML).
+ Home   Shop   Catalog   T-Shirts   Brand    Home Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
+    </item>
+    
+    <item>
+      <title>Breadcrumbs</title>
+      <link>/docs/breadcrumbs/</link>
+      <pubDate>Mon, 10 Apr 2017 16:41:54 +0100</pubDate>
+      
+      <guid>/docs/breadcrumbs/</guid>
+      <description>Base   Home   Shop   Catalog   T-Shirts  Brand   &amp;lt;nav class=&#34;breadcrumbs&#34;&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&#34;&#34;&amp;gt;...&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;span&amp;gt;...&amp;lt;/span&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/nav&amp;gt;   Centered   Home   Shop   Catalog   T-Shirts  Brand    &amp;lt;nav class=&#34;breadcrumbs push-center&#34;&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&#34;&#34;&amp;gt;...&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li class=&#34;active&#34;&amp;gt;&amp;lt;a href=&#34;&#34;&amp;gt;...&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/nav&amp;gt;   Custom Separator   Home   Shop   Catalog   T-Shirts  Brand   // css #breadcrumbs-custom-separator li:after { content: &#39;&amp;gt;&#39;; } // html &amp;lt;nav id=&#34;</description>
+    </item>
+    
+    <item>
+      <title>Pagination</title>
+      <link>/docs/pagination/</link>
+      <pubDate>Mon, 10 Apr 2017 16:42:03 +0100</pubDate>
+      
+      <guid>/docs/pagination/</guid>
+      <description>Base  ←    1  2   3   4   5    →    &amp;lt;nav class=&#34;pagination&#34;&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li class=&#34;prev&#34;&amp;gt;&amp;lt;a href=&#34;&#34;&amp;gt;&amp;amp;larr;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;&amp;lt;span&amp;gt;...&amp;lt;/span&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&#34;&#34;&amp;gt;...&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li class=&#34;next&#34;&amp;gt;&amp;lt;a href=&#34;&#34;&amp;gt;&amp;amp;rarr;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/nav&amp;gt;   Centered  ←    1   2   3   4   5    →    &amp;lt;nav class=&#34;</description>
+    </item>
+    
+    <item>
+      <title>Dropdown</title>
+      <link>/docs/dropdown/</link>
+      <pubDate>Mon, 10 Apr 2017 16:42:12 +0100</pubDate>
+      
+      <guid>/docs/dropdown/</guid>
+      <description>Demo Show Dropdown 
+   Item 1   Item 2  Item 3   Item 4   Item 5   Item 6    // Toggle &amp;lt;a href=&#34;#&#34; data-component=&#34;dropdown&#34; data-target=&#34;#my-dropdown&#34;&amp;gt;Show &amp;lt;span class=&#34;caret down&#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt; // Dropdown &amp;lt;div class=&#34;dropdown hide&#34; id=&#34;my-dropdown&#34;&amp;gt; &amp;lt;a href=&#34;&#34; class=&#34;close show-sm&#34;&amp;gt;&amp;lt;/a&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&#34;&#34;&amp;gt;...&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/div&amp;gt;   Show Dropdown 
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
+    </item>
+    
+    <item>
+      <title>Modal</title>
+      <link>/docs/modal/</link>
+      <pubDate>Mon, 10 Apr 2017 16:42:18 +0100</pubDate>
+      
+      <guid>/docs/modal/</guid>
+      <description>Calling Here you add an actual call to the modal window. Clicking the &#34;Open&#34; button below will launch a modal with content of a #my-modal div. You can use buttons or links to open modals in Kube. Clicking anywhere outside of the modal or hitting ESC will close the window.
+Open
+// Call &amp;lt;button data-component=&#34;modal&#34; data-target=&#34;#my-modal&#34;&amp;gt;Open&amp;lt;/button&amp;gt; // Markup &amp;lt;div id=&#34;my-modal&#34; class=&#34;modal-box hide&#34;&amp;gt; &amp;lt;div class=&#34;modal&#34;&amp;gt; &amp;lt;span class=&#34;close&#34;&amp;gt;&amp;lt;/span&amp;gt; &amp;lt;div class=&#34;modal-header&#34;&amp;gt;Modal Header&amp;lt;/div&amp;gt; &amp;lt;div class=&#34;</description>
+    </item>
+    
+    <item>
+      <title>Sticky</title>
+      <link>/docs/sticky/</link>
+      <pubDate>Mon, 10 Apr 2017 16:42:26 +0100</pubDate>
+      
+      <guid>/docs/sticky/</guid>
+      <description>Demo Scroll down to fix the navigation.
+    Shop   News   Contact   Blog   Account     &amp;lt;div data-component=&#34;sticky&#34;&amp;gt;...&amp;lt;/div&amp;gt;  Settings offset  Type: int Default: 0  Sets top offset in pixels when navigation is fixed.
+Callbacks fixed Using this callback, you can act upon menu becoming fixed at the top of the page.
+$(&#39;#my-nav&#39;).on(&#39;fixed.sticky&#39;, function() { // do something.</description>
+    </item>
+    
+    <item>
+      <title>Collapse</title>
+      <link>/docs/collapse/</link>
+      <pubDate>Mon, 10 Apr 2017 16:42:50 +0100</pubDate>
+      
+      <guid>/docs/collapse/</guid>
+      <description>Base Item 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+    </item>
+    
+    <item>
+      <title>Offcanvas</title>
+      <link>/docs/offcanvas/</link>
+      <pubDate>Mon, 10 Apr 2017 16:42:43 +0100</pubDate>
+      
+      <guid>/docs/offcanvas/</guid>
+      <description>Demo This feature is very easy to set up. It is based on data-component set to offcanvas, data-target set to the menu layer (#offcanvas-right in example below) and a feature-specific data-direction which is required for right menu to be set to right.
+ Open Left Open Right 
+   Home   About   Showcase   Help   Contact         Home   About   Showcase   Help   Contact     // Left &amp;lt;a href=&#34;</description>
+    </item>
+    
+    <item>
+      <title>Toggleme</title>
+      <link>/docs/toggleme/</link>
+      <pubDate>Mon, 10 Apr 2017 16:42:59 +0100</pubDate>
+      
+      <guid>/docs/toggleme/</guid>
+      <description>Demo Toggleme works on mobile devices as well as on desktops. To see Toggleme in action, just resize this window or open this page on a mobile device.
+Toggle      Shop   News   Contact   Blog   Account      &amp;lt;div class=&#34;show-sm&#34;&amp;gt; &amp;lt;a href=&#34;#&#34; data-component=&#34;toggleme&#34; data-target=&#34;#navbar&#34;&amp;gt;Toggle&amp;lt;/a&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;nav id=&#34;navbar&#34; class=&#34;hide-sm&#34;&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&#34;#&#34;&amp;gt;...&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/nav&amp;gt;   Usage Show Me</description>
+    </item>
+    
+    <item>
+      <title>Animation</title>
+      <link>/docs/animation/</link>
+      <pubDate>Mon, 10 Apr 2017 16:43:08 +0100</pubDate>
+      
+      <guid>/docs/animation/</guid>
+      <description>Slide slideUp   slideDown   Slide Up Slide Down $(&#39;#element&#39;).animation(&#39;slideUp&#39;); $(&#39;#element&#39;).animation(&#39;slideDown&#39;);  Fade fadeIn   fadeOut   Fade In Fade Out $(&#39;#element&#39;).animation(&#39;fadeIn&#39;); $(&#39;#element&#39;).animation(&#39;fadeOut&#39;);  Flip flipIn   flipOut   Flip In Flip Out $(&#39;#element&#39;).animation(&#39;flipIn&#39;); $(&#39;#element&#39;).animation(&#39;flipOut&#39;);  Zoom zoomIn   zoomOut   Zoom In Zoom Out $(&#39;#element&#39;).animation(&#39;zoomIn&#39;); $(&#39;#element&#39;).animation(&#39;zoomOut&#39;);  Rotate rotate   Rotate $(&#39;#element&#39;).animation(&#39;rotate&#39;);  Shake shake   Shake $(&#39;#element&#39;).animation(&#39;shake&#39;);  Pulse pulse   Pulse $(&#39;#element&#39;).</description>
+    </item>
+    
+    <item>
+      <title>Colors</title>
+      <link>/docs/colors/</link>
+      <pubDate>Mon, 10 Apr 2017 16:43:14 +0100</pubDate>
+      
+      <guid>/docs/colors/</guid>
+      <description>Text Contrasting black color for headings and less intense dark gray for the text helps to improve readability.
+ Headings $color-headings
+  Text $color-text
+   Links Classic blue links and soft red for the hover state makes links visible and predictable.
+ Link $color-link
+  Hover $color-link-hover
+   Buttons Blue color for primary buttons for greater consistency with links. Black color for secondary buttons allows you build a variety of UI.</description>
+    </item>
+    
+    <item>
+      <title>Sizing</title>
+      <link>/docs/sizing/</link>
+      <pubDate>Mon, 10 Apr 2017 16:43:21 +0100</pubDate>
+      
+      <guid>/docs/sizing/</guid>
+      <description>Width w5  w10  w15  w20  w25  w30  w35  w40  w45  w50  w55  w60  w65  w70  w75  w80  w85  w90  w95  w100  &amp;lt;div class=&#34;w5&#34;&amp;gt;w5&amp;lt;/div&amp;gt; ... &amp;lt;div class=&#34;w100&#34;&amp;gt;w100&amp;lt;/div&amp;gt;   100% width on small devices.
+w100-sm  &amp;lt;div class=&#34;w50 w100-sm&#34;&amp;gt;...&amp;lt;/div&amp;gt;   Auto Width .w-auto
+.w-auto-sm  Max Width .max-w5 — .</description>
+    </item>
+    
+    <item>
+      <title>Mixins</title>
+      <link>/docs/mixins/</link>
+      <pubDate>Mon, 10 Apr 2017 16:43:36 +0100</pubDate>
+      
+      <guid>/docs/mixins/</guid>
+      <description>Get Started Kube has been designed to help you with web development, that&#39;s why it&#39;s so easy to use Kube when building websites. To move forward quickly and efficiently, just link kube.scss from Kube package: this file contains variables, mixins and everything you need to simplify daily routine tasks.
+For example, import kube.scss into your main.scss styles file, which you will later compile into main.css
+// main.scss @import &#34;dist/scss/kube.scss&#34;;  Now all Kube&#39;s variables and mixins are readily available in main.</description>
+    </item>
+    
+    <item>
+      <title>Utils</title>
+      <link>/docs/utils/</link>
+      <pubDate>Mon, 10 Apr 2017 16:43:30 +0100</pubDate>
+      
+      <guid>/docs/utils/</guid>
+      <description>Group Combines float elements to group with a clearfix.
+This text is visibly floating left  This text looks like a case of right float   &amp;lt;div class=&#34;group&#34;&amp;gt; &amp;lt;div class=&#34;float-left&#34;&amp;gt;...&amp;lt;/div&amp;gt; &amp;lt;div class=&#34;float-right&#34;&amp;gt;...&amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt;   Visibility Below is an invisible div with class invisible. You can&#39;t see it, because it is invisible. You can&#39;t see invisible things.
+invisible  But you can see this div because it has visible class.</description>
+    </item>
+    
+  </channel>
+</rss>

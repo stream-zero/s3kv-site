@@ -1,0 +1,21 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "S3KV"
+theme = "kube"
+description = "S3KV is a key value database backed by S3 Object Storage."
+Paginate = 4
+contentDir = 'themes/kube/exampleSite/content'
+
+[Params]
+  RSSLink = "/index.xml"
+  author = "elemnts.net" # add your company name
+  github = "" # add your github profile name
+  twitter = "" # add your twitter profile
+  email = "myemail@myaddress.xxx"
+
+[[menu.main]]
+    name = "Quick Start"
+    weight = -100
+    url = "/docs/quick-start"
+
+
