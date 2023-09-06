@@ -1,0 +1,87 @@
+{{ define "title"}} {{ .Site.Title}} {{end}}
+{{ define "header"}} {{ partial "header" .}} {{end}}
+{{ define "main"}}
+
+<div id="main">
+  <div id="hero">
+    <h1>{{.Title}}</h1>
+    <p>S3KV is a key value database backed by S3 Object Storage.</p>
+  </div>
+   <div id="action-buttons">
+    <a class="button primary big" href="https://github.com/stream-zero/s3kv/releases/tag/0.1.1" onclick="_gaq.push(['_trackEvent', 'kube', 'download']);">Download</a> <a class="button outline big" href="https://github.com/stream-zero/s3kv" onclick="_gaq.push(['_trackEvent', 'kube', 'github']);">View on Github</a>
+    <p>&nbsp;</p>
+  </div>
+  <div class="message focus" data-component="message"> <span class="close small"></span>
+    pip install s3kv
+  </div>
+  <div id="kube-features">
+    <div class="row gutters">
+
+      <div class="col col-4 item">
+        <figure>
+          <img alt="Typography" height="48" src="{{ "/img/kube/icon-typo.png" | relURL }}" width="48">
+        </figure>
+        <h3>Simple Key-Value Interface</h3>
+        <p>The library provides a straightforward key-value interface, allowing developers to store, retrieve, and delete data with ease.</p>
+      </div>
+
+      <div class="col col-4 item">
+        <figure>
+          <img alt="Baseline" height="48" src="{{ "/img/kube/icon-baseline.png" | relURL }}" width="48">
+        </figure>
+        <h3>Highly Scalable</h3>
+        <p>S3KV is built on top of Amazon S3, one of the most widely used cloud object storage services, which ensures high availability, durability, and scalability.</p>
+      </div>
+
+      <div class="col col-4 item">
+        <figure>
+          <img alt="Minimalism" height="48" src="{{ "/img/kube/icon-minimalism.png" | relURL }}" width="48">
+        </figure>
+        <h3>Encryption at Rest</h3>
+        <p>All data stored in S3KV is encrypted at rest by leveraging the encryption capabilities of S3. This ensures the security and confidentiality of data stored in the database.</p>
+      </div>
+
+    </div>
+
+    <div class="row gutters">
+
+      <div class="col col-4 item">
+        <h3>Support for Very Large Key Sizes</h3>
+        <p>S3KV can handle key-value pairs with significantly large key sizes, accommodating various use cases and data structures.</p>
+      </div>
+
+     <div class="col col-4 item">
+        <h3>Policy-Based Key Access</h3>
+        <p>Users can define fine-grained access policies for individual keys or groups of keys. This ensures that only authorized users or applications can read, write, or delete specific keys.</p>
+      </div>
+
+      <div class="col col-4 item">
+        <h3>Key Expiration &amp; Legal Hold</h3>
+        <p>To manage data retention, S3KV allows users to set expiration policies on keys. Once a key expires, it will be automatically deleted from the database.</p>
+      </div>
+      
+    </div>
+
+    <div class="row gutters">
+
+      <div class="col col-4 item">
+        <h3>Low Latency Access</h3>
+        <p>S3KV optimizes key access operations to provide low-latency responses, making it suitable for real-time applications.</p>
+      </div>
+
+     <div class="col col-4 item">
+        <h3>Key Indexing for Faster Search</h3>
+        <p>Users can define fine-grained access policies for individual keys or groups of keys. This ensures that only authorized users or applications can read, write, or delete specific keys.</p>
+      </div>
+
+      <div class="col col-4 item">
+        <h3>Key Tagging</h3>
+        <p>With the tagging feature, developers can assign key-value pairs to one or more tags. A tag is a simple key-value pair that helps organize and categorize keys in the database.</p>
+      </div>
+
+    </div>
+
+</div>
+</div>
+{{ end }}
+{{ define "footer"}} {{ partial "footer" .}} {{end}}
