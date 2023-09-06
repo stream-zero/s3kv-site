@@ -4,7 +4,7 @@ description = "Up and running in under a minute"
 weight = 10
 draft = false
 toc = true
-bref = "S3KV is a key value database backed by S3 Object Storage. Primary use cases include configuration and secrets management as well as data flow caching. The Library supports the standard add/get/delete and extends those by convenience methods for automated cache retrieval and object metadadta."
+bref = "S3KV is a key value database backed by S3-Compatible Object Storage. Primary use cases include configuration and secrets management as well as data flow caching. The Library supports the standard add/get/delete and extends those by convenience methods for automated cache retrieval and object metadadta."
 +++
 
 ### Basic Operations
